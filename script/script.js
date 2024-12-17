@@ -10,11 +10,11 @@
 
 // INPUT
 // l'utente inserisce la sua eta (1-100)
-let etaUtente = prompt ("inserisci la tua eta");
+let etaUtente = parseInt( prompt ("inserisci la tua eta"));
 console.log (etaUtente);
 
 // l'utente inserisce il numero di kilometri da percorrere (1-200)
-let kmUtente = prompt ("inserisci il numero di km");
+let kmUtente = parseInt(  prompt ("inserisci il numero di km"));
 console.log (kmUtente);
 // il pc restituisce un numero  (0,21-200)
 let prezzoPc = 0.21 * kmUtente;
@@ -24,6 +24,7 @@ console.log (prezzoPc);
 // ELABORAZIONE
 // verifico l'eta dell'utente
 let risultato;
+
 // SE inferiore a 18 applico 20% Sconto 
 if (etaUtente < 18) {
     prezzoPc = prezzoPc - (prezzoPc * 0.20);
@@ -33,11 +34,10 @@ if (etaUtente < 18) {
     prezzoPc = prezzoPc - (prezzoPc * 0.40); 
     
 } else{
-    console.log(risultato)
-    
+    // ALTRIMENTI prezzo pieno (0.21 € al km)
+    console.log(risultato) 
 }
 
-// ALTRIMENTI prezzo pieno (0.21 € al km)
 
 // OUTPUT
 // comunichiamo all'utente il prezzo del biglietto
